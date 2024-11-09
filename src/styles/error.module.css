@@ -1,0 +1,42 @@
+.mainContainer {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.errContainer {
+  width: 300px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid #dddddd;
+  border-radius: var(--def-border-radius);
+  background-color: #efefef;
+}
+
+.heading {
+  color: var(--nav-link-color);
+}
+
+.btn {
+  display: inline-block;
+  text-align: center;
+  border-radius: var(--def-border-radius);
+  background-color: var(--nav-link-color);
+  color: #fff;
+  padding: var(--def-padding);
+  transition: var(--tr-duration);
+  box-shadow: var(--btn-shadow);
+}
+
+.btn:hover {
+  background-color: var(--nav-link-hover-color);
+}
+
+.btn:active {
+  box-shadow: none;
+}

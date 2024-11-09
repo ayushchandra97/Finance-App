@@ -1,0 +1,176 @@
+.tableContainer {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.tb {
+  border-spacing: 0;
+  width: 100%;
+  border-collapse: separate;
+  background-color: var(--bg-header);
+  border-radius: calc(var(--def-border-radius) + 10px);
+  box-shadow: var(--def-shadow);
+  font-size: 0.9rem;
+}
+
+.tb_header {
+  position: relative;
+  background-color: var(--th-color);
+}
+
+.tb_header:hover {
+  background-color: var(--th-hover-color);
+}
+
+.tb_header,
+.cell {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+.tb tr:first-child th,
+.tb tr:first-child td {
+  border-top: none;
+}
+
+.tb tr:last-child th,
+.tb tr:last-child td {
+  border-bottom: none;
+}
+
+.tb tr td:first-child,
+.tb tr th:first-child {
+  border-left: none;
+}
+
+.tb tr td:last-child,
+.tb tr th:last-child {
+  border-right: none;
+}
+
+.tb tr:first-child th:first-child {
+  border-top-left-radius: calc(var(--def-border-radius) + 10px);
+}
+
+.tb tr:first-child th:last-child {
+  border-top-right-radius: calc(var(--def-border-radius) + 10px);
+}
+
+.resizer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 5px;
+  background: rgba(0, 0, 0, 0.5);
+  cursor: col-resize;
+  user-select: none;
+  touch-action: none;
+  opacity: 0;
+}
+
+.resizer:hover {
+  opacity: 1;
+}
+
+.resizer.isResizing {
+  background: var(--nav-link-color);
+  opacity: 1;
+}
+
+.icon {
+  width: 20px;
+}
+
+.hcol {
+  display: flex;
+  justify-content: space-between;
+}
+
+.type {
+  width: 100px;
+  display: flex;
+  align-items: center;
+  border-radius: var(--type-radius);
+  padding: var(--def-padding) 4px;
+  color: var(--bg-home);
+  gap: 5px;
+  filter: opacity(var(--type-opacity));
+}
+
+.income {
+  background-color: var(--color-income);
+}
+
+.expenses {
+  background-color: var(--color-expenses);
+}
+
+.btn {
+  border-radius: var(--def-border-radius);
+  box-shadow: var(--def-shadow);
+  padding: var(--def-padding);
+  color: #fff;
+  transition: var(--tr-duration);
+}
+
+.btn:active {
+  box-shadow: none;
+}
+
+.editBtn {
+  display: inline-block;
+  background-color: var(--nav-link-color);
+}
+
+.editBtn:hover {
+  background-color: var(--nav-link-hover-color);
+}
+
+.delBtn {
+  background-color: var(--color-danger);
+  cursor: pointer;
+}
+
+.delBtn:hover {
+  background-color: var(--color-danger-hover);
+}
+
+.paginationContainer {
+  margin: 20px 17px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.pageBtn {
+  border: 1px solid var(--page-btn-color);
+  padding: var(--def-padding);
+  border-radius: var(--def-border-radius);
+  margin-right: 10px;
+  box-shadow: var(--def-shadow);
+  transition: var(--tr-duration);
+  cursor: pointer;
+}
+
+.pageBtn:hover {
+  background-color: var(--bg-header);
+}
+
+.pageBtn:active {
+  box-shadow: none;
+}
+
+.pageBtn:disabled {
+  box-shadow: none;
+  pointer-events: none;
+}
+
+@media (max-width: 600px) {
+  .tb {
+    overflow-x: scroll;
+  }
+}

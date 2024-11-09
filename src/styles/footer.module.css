@@ -1,0 +1,22 @@
+.footer {
+  background-color: var(--bg-header);
+  box-shadow: var(--footer-shadow);
+}
+
+.footerMain {
+  display: flex;
+  margin: 2rem var(--main-wrapper-margin);
+}
+
+.footerInfo {
+  flex-grow: 1;
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+}
+
+.socials a {
+  margin-left: 10px;
+}

@@ -1,0 +1,37 @@
+.mainContainer {
+  padding: calc(var(--def-padding) + 10px);
+
+  & h1 {
+    color: var(--nav-link-color);
+    margin-bottom: 20px;
+  }
+}
+
+.btnContainer {
+  margin-bottom: 20px;
+}
+
+.btn {
+  border-radius: var(--def-border-radius);
+  box-shadow: var(--def-shadow);
+  padding: var(--def-padding);
+  color: #fff;
+  transition: var(--tr-duration);
+  background-color: var(--nav-link-color);
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  width: 220px;
+}
+
+.btn:hover {
+  background-color: var(--nav-link-hover-color);
+}
+
+.btn:active {
+  box-shadow: none;
+}
+
+.icon {
+  width: 20px;
+}

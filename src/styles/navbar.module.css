@@ -1,0 +1,44 @@
+.mainHeader {
+  background-color: var(--bg-header);
+  box-shadow: var(--header-shadow);
+}
+
+.mainHeading {
+  color: var(--nav-link-color);
+}
+
+.navBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  margin: 0 var(--main-wrapper-margin);
+}
+
+.signInBtn {
+  color: var(--nav-link-color);
+  margin-right: 10px;
+}
+
+.signInBtn:hover {
+  color: var(--nav-link-hover-color);
+}
+
+.signUpBtn {
+  display: inline-block;
+  text-align: center;
+  border-radius: var(--def-border-radius);
+  background-color: var(--nav-link-color);
+  color: #fff;
+  padding: var(--def-padding);
+  transition: var(--tr-duration);
+  box-shadow: var(--btn-shadow);
+}
+
+.signUpBtn:hover {
+  background-color: var(--nav-link-hover-color);
+}
+
+.signUpBtn:active {
+  box-shadow: none;
+}
