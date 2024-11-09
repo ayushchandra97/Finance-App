@@ -43,13 +43,13 @@ export function BarChartComponent() {
   return (
     <div>
       <ResponsiveContainer width="100%" height={300}>
-        <BarChart width={300} height={300} data={data}>
+        <BarChart width={300} height={300} data={data} margin={{ left: -20 }}>
           <XAxis
             dataKey="category"
-            tick={{ width: 75, fontSize: 8 }}
+            tick={{ width: 75, fontSize: 9 }}
             interval={0}
           />
-          <YAxis />
+          <YAxis tick={{ fontSize: 8 }} />
           <Tooltip />
           <Legend
             payload={[

@@ -72,5 +72,12 @@
 @media (max-width: 768px) {
   .amountContainer {
     padding-left: 10px;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .chartContainer {
+    margin: auto;
+    width: 95%;
   }
 }
