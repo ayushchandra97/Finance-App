@@ -5,15 +5,20 @@ import styles from "@/styles/auth.module.css"
 import { useState } from "react"
 import AuthState from "@/types/auth-state"
 import { ExclamationCircleIcon } from "@heroicons/react/16/solid"
+import { useSearchParams } from "next/navigation"
 
 export default function LoginPage() {
   const [formState, setFormState] = useState<AuthState>({})
+
+  const searchParams = useSearchParams()
+
+  const serverError = searchParams.get("error") || null
 
   async function handleSubmit(formData: FormData) {
     const res = await login(formState, formData)
     setFormState(res)
   }
-  console.log(formState)
+  console.log("Form state is:", formState)
   return (
     <>
       <h3>Login to continue</h3>
@@ -55,6 +60,12 @@ export default function LoginPage() {
           <p className={styles.err}>
             <ExclamationCircleIcon className={styles.icon} />
             {formState.message}
+          </p>
+        )}
+        {serverError && (
+          <p className={styles.err}>
+            <ExclamationCircleIcon className={styles.icon} />
+            {serverError}
           </p>
         )}
         <small>

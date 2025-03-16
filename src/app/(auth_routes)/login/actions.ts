@@ -28,6 +28,8 @@ export default async function login(prevState: AuthState, formData: FormData) {
   })
 
   if (!validatedFields.success) {
+    console.log("Form state is: ", validatedFields.error.flatten().fieldErrors)
+    console.log("Prev state is: ", prevState)
     return {
       errors: validatedFields.error.flatten().fieldErrors,
     }
