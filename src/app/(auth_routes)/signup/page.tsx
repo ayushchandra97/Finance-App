@@ -5,9 +5,14 @@ import styles from "@/styles/auth.module.css"
 import { useState } from "react"
 import AuthState from "@/types/auth-state"
 import { ExclamationCircleIcon } from "@heroicons/react/16/solid"
+import { useSearchParams } from "next/navigation"
 
 export default function SignUpPage() {
   const [formState, setFormState] = useState<AuthState>({})
+
+  const searchParams = useSearchParams()
+
+  const serverError = searchParams.get("error") || null
 
   async function handleSubmit(formData: FormData) {
     const res = await signUp(formState, formData)
@@ -26,7 +31,7 @@ export default function SignUpPage() {
           required
           className={styles.formInput}
         />
-        {formState.errors?.email && (
+        {formState?.errors?.email && (
           <p className={styles.err}>
             <ExclamationCircleIcon className={styles.icon} />
             {formState?.errors.email}
@@ -41,7 +46,7 @@ export default function SignUpPage() {
           required
           className={styles.formInput}
         />
-        {formState.errors?.password && (
+        {formState?.errors?.password && (
           <p className={styles.err}>
             <ExclamationCircleIcon className={styles.icon} />
             {formState?.errors.password}
@@ -54,6 +59,12 @@ export default function SignUpPage() {
           <p className={styles.err}>
             <ExclamationCircleIcon className={styles.icon} />
             {formState.message}
+          </p>
+        )}
+        {serverError && (
+          <p className={styles.err}>
+            <ExclamationCircleIcon className={styles.icon} />
+            {serverError}
           </p>
         )}
         <small>

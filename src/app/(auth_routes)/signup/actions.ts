@@ -7,12 +7,11 @@ import { redirect } from "next/navigation"
 import { z } from "zod"
 
 const FormSchema = z.object({
-  email: z
-    .string({
-      invalid_type_error: "Please enter a valid email",
-      required_error: "Please enter a valid email",
-    })
-    .email({ message: "Please enter a valid email" }),
+  email: z.string({
+    invalid_type_error: "Please enter a valid email",
+    required_error: "Please enter a valid email",
+  }),
+  // .email({ message: "Please enter a valid email" }),
   password: z
     .string({
       invalid_type_error: "Please enter a valid password",
