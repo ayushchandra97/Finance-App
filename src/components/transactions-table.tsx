@@ -161,7 +161,7 @@ export default function TransactionsTable() {
     columnResizeDirection: "ltr",
   })
 
-  console.log(data)
+  // console.log(data)
   return (
     <div>
       <div className={styles.tableContainer}>

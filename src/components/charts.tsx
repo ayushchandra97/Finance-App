@@ -178,7 +178,7 @@ export function LineChartComponent() {
   }, [])
 
   const [data, setData] = useState<ChartType[]>([])
-  console.log(data)
+  // console.log(data)
 
   return (
     <ResponsiveContainer width="100%" height={400}>

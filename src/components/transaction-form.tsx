@@ -151,7 +151,7 @@ export function EditTransactionForm({
     )
     formData.set("category_id", matchingCategory?.id || "")
     formData.delete("category")
-    console.log("date is: ", formData.get("date"))
+    // console.log("date is: ", formData.get("date"))
     const response = await editTransaction(formState, formData)
     setFormState(response)
   }

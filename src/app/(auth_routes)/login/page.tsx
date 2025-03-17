@@ -18,7 +18,7 @@ export default function LoginPage() {
     const res = await login(formState, formData)
     setFormState(res)
   }
-  console.log("Form state is:", formState)
+  // console.log("Form state is:", formState)
   return (
     <>
       <h3>Login to continue</h3>
