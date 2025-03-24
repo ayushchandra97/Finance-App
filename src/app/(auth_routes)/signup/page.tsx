@@ -68,7 +68,7 @@ export default function SignUpPage() {
           </p>
         )}
         <small>
-          Already have an acount? <Link href="/login">Sign In</Link>
+          Already have an account? <Link href="/login">Sign In</Link>
         </small>
       </form>
     </>

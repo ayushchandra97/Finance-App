@@ -69,7 +69,7 @@ export default function LoginPage() {
           </p>
         )}
         <small>
-          Don&apos;t have an acount? <Link href="/signup">Sign Up</Link>
+          Don&apos;t have an account? <Link href="/signup">Sign Up</Link>
         </small>
       </form>
     </>
